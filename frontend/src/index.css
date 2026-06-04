@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+.id-cell {
+  font-family: ui-monospace, Consolas, monospace;
+  max-width: 11rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

@@ -1,0 +1,21 @@
+meta {
+  name: Update Number
+  type: http
+  seq: 6
+}
+
+put {
+  url: {{baseUrl}}/numbers/{{number_id}}
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{access_token}}
+}
+
+body:json {
+  {
+    "value": 100
+  }
+}

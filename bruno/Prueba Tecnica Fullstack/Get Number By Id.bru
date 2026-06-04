@@ -1,0 +1,15 @@
+meta {
+  name: Get Number By Id
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{baseUrl}}/numbers/{{number_id}}
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{access_token}}
+}

@@ -1,0 +1,26 @@
+meta {
+  name: Create Number
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{baseUrl}}/numbers
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{access_token}}
+}
+
+body:json {
+  {
+    "value": 42
+  }
+}
+
+script:post-response {
+  const data = res.getBody();
+  bru.setEnvVar("number_id", data.id);
+}
